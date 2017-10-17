@@ -8,7 +8,10 @@ $(document).ready(function() {
   });
 
   $("button#last").click(function(){
-    $("div.pop-up").after("<img src='img/bubbles.gif'>");
-  });
+    $("div#pop-up").append("<img src='img/bubbles.gif'>");
+    $("#pop-up").children("img").click(function() {
+    $(this).remove();
+    });
 
+  });
 });
